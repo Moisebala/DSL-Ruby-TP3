@@ -9,7 +9,7 @@ contact = Contact.nom "Guy" do
   prenom "Tremblay"
   tel "1", "5144361829", :Mobile
   email "tremblay.guy@gmail.com"
-  adresse 1256, "Ontario", "h3h-2L7", "Montréal"
+  adresse 100, "Sherbrook", "h3h-2L7", "Montréal"
   societe "UQAM"
   groupe :Professeur
   fete 12 ,12 ,1900
