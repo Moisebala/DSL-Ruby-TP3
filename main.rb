@@ -4,7 +4,7 @@ require 'contacts/csv_contact'
 include Contacts
 
 
-#avec instance_eval
+#avec meta-programmation
 contact = Contact.nom "Guy" do
   prenom "Tremblay"
   tel "1", "5144361829", :Mobile
