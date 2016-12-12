@@ -4,7 +4,7 @@ require 'contacts/csv_contact'
 include Contacts
 
 
-#DSL avec instance_eval
+#avec instance_eval
 contact = Contact.nom "Guy" do
   prenom "Tremblay"
   tel "1", "5144361829", :Mobile
@@ -17,7 +17,7 @@ contact = Contact.nom "Guy" do
 end
 puts contact
 
-#DSL avec chainage de méthodes
+#avec chainage de méthodes
 contact2 = Contact.nom("Moussa")
               .prenom("Balla")
               .tel("1", "4384033676", :Domicile)
