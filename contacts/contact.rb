@@ -60,8 +60,8 @@ class Contact
   alias :mail :email
   alias :courriel :email
 
-  def adresse(numero, rue, codepostal, ville)
-    @adresses << Adresse.new(numero, rue, codepostal, ville)
+  def adresse(numero, rue, codepostal, ville ,pays)
+    @adresses << Adresse.new(numero, rue, codepostal, ville ,pays)
     self
   end
 
