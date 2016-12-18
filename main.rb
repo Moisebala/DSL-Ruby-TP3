@@ -30,4 +30,4 @@ contact2 = Contact.nom("Moussa")
               .social("Moussaballa" ,:Facebook)
 puts contact2
 
-#CSVContact.new.creation(contact2)
+#CSVContact.new.sauvegarder(contact2)

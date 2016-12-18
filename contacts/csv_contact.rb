@@ -3,7 +3,7 @@ require 'csv'
 
 module Contacts
 class CSVContact
-  def creation (contact)
+  def sauvegarder (contact)
     nomfichier = "#{contact.nom} - Contact"
     adresse = contact.adresses.map {|adr| adr.to_s}.join(" - ")
     telephones = contact.telephones.map {|tel| tel.to_s}.join(" - ")

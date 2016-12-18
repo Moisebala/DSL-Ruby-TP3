@@ -27,6 +27,7 @@ class Contact
     contact
   end
   def prenom(prenom)
+    return @prenom if prenom.nil?
     @prenom = prenom
     self
   end
@@ -37,6 +38,7 @@ class Contact
   end
 
   def groupe(groupe)
+    return @groupe if groupe.nil?
     @groupe = groupe
     self
   end
@@ -50,6 +52,7 @@ class Contact
   alias :phone :tel
 
   def email(email)
+    return @email if email.nil?
     @email = email
     self
   end
@@ -63,6 +66,7 @@ class Contact
   end
 
   def societe(societe)
+    return @societe if societe.nil?
     @societe = societe
     self
   end
