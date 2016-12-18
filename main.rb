@@ -1,9 +1,16 @@
 $LOAD_PATH.unshift('.','contacts')
 require 'contacts/contact'
 require 'contacts/csv_contact'
+require 'contacts/adresse'
 include Contacts
 
-
+# creation des adresses methode de chainage
+a1 = Adresse.numero("325")
+             .rue("joliette")
+             .codepostal("J4h-2L4")
+             .ville("Montreal")
+             .pays("Canada ")
+puts a1
 #avec meta-programmation
 contact = Contact.nom "Guy" do
   prenom "Tremblay"
@@ -23,7 +30,7 @@ contact2 = Contact.nom("Moussa")
               .tel("1", "4384033676", :Domicile)
               .tel("1", "4384033676", :Mobile)
               .email("moisebala@gmail.com")
-              .adresse(325, "Joliette", "J4h-2L4", "Montréal","Canada")
+              .adresse(325, "joliette","J4h-2L4"," Montreal"," Canada" )
               .societe("UQAM")
               .groupe(:Famille)
               .fete(03,16,1988)
