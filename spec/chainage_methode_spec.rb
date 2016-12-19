@@ -34,5 +34,22 @@ describe 'DSL chainage de methode contact' do
 
     contact2.to_s.must_equal @attendu
   end
+
+  it 'DSL contact avec utilisation de chainage ' do
+    contact2 = Contact.nom("Moussa")
+                   .prenom("Balla")
+                   .phone(1, "5142546369", :Mobile)
+                   .phone(1, "5142546369", :Domicile)
+                   .courriel("moisebala@gmail.com")
+                   .adresse(100, "Sherbrook", "h3h-2L7", "Montréal","Canada" )
+                   .adresse(325, "joliette","J4h-2L4"," Montreal"," Canada" )
+                   .compagnie("UQAM")
+                   .groupe(:Famille)
+                   .anniversaire(03,16,1988)
+                   .social("moisebala" ,:Facebook)
+                   .social("moisebala" ,:tweeter)
+
+    contact2.to_s.must_equal @attendu
+  end
 end
 end

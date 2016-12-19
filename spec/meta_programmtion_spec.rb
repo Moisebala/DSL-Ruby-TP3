@@ -33,5 +33,22 @@ describe 'DSL meta programmation utilisant instance_eval' do
     end
     contact2.to_s.must_equal @attendu
   end
+
+  it 'DSL contact avec utisation de metaprogrammation avec alias' do
+    contact2 = Contact.nom "Moussa" do
+      prenom "Balla"
+      phone 1, "5142546369", :Mobile
+      phone 1, "5142546369", :Domicile
+      courriel "moisebala@gmail.com"
+      adresse 100, "Sherbrook", "h3h-2L7", "Montréal","Canada"
+      adresse 325, "joliette","J4h-2L4"," Montreal"," Canada"
+      compagnie "UQAM"
+      groupe :Famille
+      anniversaire 03,16,1988
+      social "moisebala" ,:Facebook
+      social "moisebala" ,:tweeter
+    end
+    contact2.to_s.must_equal @attendu
+  end
 end
 end

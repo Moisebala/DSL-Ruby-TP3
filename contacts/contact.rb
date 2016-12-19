@@ -78,6 +78,7 @@ class Contact
     @fete= "#{jour}-#{mois}-#{annee}"
     self
   end
+  alias :anniversaire :fete
 
   def to_s
     telephones = @telephones.map {|tel| tel.to_s}.join(" - ")
