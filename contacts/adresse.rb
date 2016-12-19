@@ -34,7 +34,7 @@ class Adresse
     self
   end
   def to_s
-   "#{@numero}, #{@rue} (#{@codepostal}) - #{@ville} , #{@pays}"
+    "#{@numero}, #{@rue} (#{@codepostal}) - #{@ville} , #{@pays}"
   end
 end
 end

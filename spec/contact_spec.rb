@@ -3,6 +3,16 @@ require 'contacts/contact'
 
 module Contacts
 describe "Tout ses attributs  class d'un contact" do
+  before do
+    adresse = Adresse.new( 100, "Sherbrook", "h3h-2L7", "Montréal","Canada" )
+    adresses = [adresse]
+    tel = Telephone.new(1,"5142546369", :Mobile)
+    tels = [tel]
+    soc = Sociaux.new( "moisebala", :facebook)
+    socs = [soc]
+    @attendu = Contact.new( "Moussa","Balla", tels,"moisebala@gmail.com",
+                            adresses,"UQAM",:Famille,"03,16,1988",socs).to_s
+  end
   describe Telephone do
     it "Ajouter un numero de telephone pour un contact" do
       c = Telephone.new (1,"5146035652","Mobile")
