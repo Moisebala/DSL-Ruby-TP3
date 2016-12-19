@@ -1,5 +1,7 @@
 require 'rspec'
+require 'contacts/contact'
 
+module Contacts
 describe 'DSL meta programmation utilisant instance_eval' do
   before do
     adresse = Adresse.new( 100, "Sherbrook", "h3h-2L7", "Montréal","Canada" )
@@ -31,4 +33,5 @@ describe 'DSL meta programmation utilisant instance_eval' do
     end
     contact2.to_s.must_equal @attendu
   end
+end
 end

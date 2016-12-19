@@ -1,5 +1,7 @@
 require 'rspec'
-require 'contacts'
+require 'contacts/contact'
+
+module Contacts
 
 describe 'DSL chainage de methode contact' do
   before do
@@ -32,4 +34,5 @@ describe 'DSL chainage de methode contact' do
 
     contact2.to_s.must_equal @attendu
   end
+end
 end
