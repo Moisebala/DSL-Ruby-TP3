@@ -4,7 +4,7 @@ require 'contacts/csv_contact'
 require 'contacts/adresse'
 include Contacts
 
-#creatio de DSL Adresse
+#creation de DSL Adresse
 A1= Adresse.numero("100")
     .rue("sherbrook")
     .codepostal("h3h-2L7")
