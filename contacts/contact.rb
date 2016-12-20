@@ -60,7 +60,7 @@ class Contact
   alias :mail :email
   alias :courriel :email
 
-  def adresse(*adresse)
+  def adresse(adresse)
     @adresses << adresse
     self
   end

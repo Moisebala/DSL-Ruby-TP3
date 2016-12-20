@@ -11,6 +11,7 @@ A1= Adresse.numero("100")
     .ville("Montreal")
     .pays("Canada ")
 
+
 #avec meta-programmation
 contact = Contact.nom "Guy" do
   prenom "Tremblay"
@@ -40,5 +41,4 @@ contact2 = Contact.nom("Moussa")
               .fete(03,16,1988)
               .social("Moussaballa" ,:Facebook)
 puts contact2
-
 #CSVContact.new.sauvegarder(contact2)

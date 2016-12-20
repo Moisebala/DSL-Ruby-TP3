@@ -3,12 +3,12 @@ require 'contacts/contact'
 
 module Contacts
 describe Contact do
-  before do
+  it "un contact cree " do
     adresse = Adresse.new( 100, "Sherbrook", "h3h-2L7", "Montréal","Canada" )
-    adresses = [adresse]
+    adresses =[adresse]
     tel = Telephone.new(1,"5142546369", :Mobile)
     tels = [tel]
-    soc = Sociaux.new( "moisebala", :facebook)
+    soc = Social.new( "moisebala", :facebook)
     socs = [soc]
     @attendu = Contact.new( "Moussa","Balla", tels,"moisebala@gmail.com",
                             adresses,"UQAM",:Famille,"03,16,1988",socs).to_s
