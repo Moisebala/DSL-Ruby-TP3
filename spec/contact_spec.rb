@@ -10,8 +10,17 @@ describe Contact do
     tels = [tel]
     soc = Social.new( "moisebala", :facebook)
     socs = [soc]
-    @attendu = Contact.new( "Moussa","Balla", tels,"moisebala@gmail.com",
-                            adresses,"UQAM",:Famille,"03,16,1988",socs).to_s
+    attendu = Contact.new( "Moussa","Balla", tels,"moisebala@gmail.com",
+                            adresses,"UQAM",:Famille,"03,16,1988",socs)
+    attendu.to_s.must_equal
+    "Moussa Balla
+    Téléphones :  +1 514-254-6369 (Mobile)
+    Email : moisebala@gmail.com
+    Adresses : 100, sherbrook (h3h-2L7) - Montreal , Canada
+    societe : UQAM
+    Groupe : Famille
+    fete : 3-16-1988
+    sociaux : @moisebala  (Facebook)"
   end
   describe Telephone do
     it "Ajouter un numero de telephone pour un contact" do
