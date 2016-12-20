@@ -2,7 +2,7 @@ require 'rspec'
 require 'contacts/contact'
 
 module Contacts
-describe "Tout ses attributs  class d'un contact" do
+describe Contact do
   before do
     adresse = Adresse.new( 100, "Sherbrook", "h3h-2L7", "Montréal","Canada" )
     adresses = [adresse]

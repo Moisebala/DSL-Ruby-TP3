@@ -44,7 +44,7 @@ describe 'DSL meta programmation utilisant instance_eval' do
       adresse 325, "joliette","J4h-2L4"," Montreal"," Canada"
       compagnie "UQAM"
       groupe :Famille
-      anniversaire 03,16,1988
+      fete 03,16,1988
       social "moisebala" ,:Facebook
       social "moisebala" ,:tweeter
     end
