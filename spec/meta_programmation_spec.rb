@@ -15,7 +15,7 @@ describe 'DSL avec meta programation ' do
     soc = Social.new( "moisebala", :facebook)
     socs=[soc]
     @attendu = Contact.new( "Moussa","Balla", tels,"moisebala@gmail.com",
-                            adresses,"UQAM",:Famille,"03,16,1988",socs)
+                            adresses,"UQAM",:Famille,"03,16,1988",socs).to_s
 
   end
   it 'DSL contact avec utilisation de metaprogramtion ' do
