@@ -1,56 +1,61 @@
-require 'rspec'
+require_relative 'spec_helper.rb'
 require 'contacts/contact'
+
 
 module Contacts
 
-describe 'DSL chainage de methode contact' do
+describe "DSL chainage de methode contact " do
   before do
-    adresse = Adresse.numero("100")
-                   .rue("sherbrook")
-                   .codepostal("h3h-2L7")
-                   .ville("Montreal")
-                   .pays("Canada ")
-    adresses =[adresse]
-    tel = Telephone.new(1,"5142546369",:Mobile)
+    tel = Telephone.new(1, "5142546369", :Mobile)
     tels=[tel]
-    soc = Social.new( "moisebala", :facebook)
+    adr = Adresse.numero("325")
+              .rue("joliette")
+              .codepostal("J4h-2L4")
+              .ville("Montreal")
+              .pays("Canada ")
+    adrs =[adr]
+    soc = Social.new("moisebala",:Facebook)
     socs=[soc]
-    @attendu = Contact.new( "Moussa","Balla", tels,"moisebala@gmail.com",
-                           adresses,"UQAM",:Famille,"03,16,1988",socs).to_s
+    fete ="#{03}-#{16}-#{1988}"
+    @attendu = Contact.new( "Moussa","Balla",tels,"moisebala@gmail.com",
+                           adrs,"UQAM",:Famille,fete,socs).to_s
 
   end
-  it 'DSL contact avec utilisation de chainage ' do
-    contact2 = Contact.nom("Moussa")
+
+  it "DSL contact avec utilisation de chainage " do
+    contact1 = Contact.nom("Moussa")
                    .prenom("Balla")
                    .tel(1, "5142546369", :Mobile)
                    .email("moisebala@gmail.com")
-                   .adresse((Adresse.numero("325")
+                   .adresse(Adresse.numero("325")
                                  .rue("joliette")
                                  .codepostal("J4h-2L4")
                                  .ville("Montreal")
-                                 .pays("Canada ") ).to_s)
+                                 .pays("Canada "))
                    .societe("UQAM")
                    .groupe(:Famille)
                    .fete(03,16,1988)
                    .social("moisebala" ,:Facebook)
-    contact2.to_s.must_equal @attendu
+    contact1.to_s.must_equal @attendu
   end
 
-  it 'DSL contact avec utilisation de chainage sur les alias ' do
+  it "DSL contact avec utilisation de chainage sur les alias " do
     contact2 = Contact.nom("Moussa")
                    .prenom("Balla")
                    .phone(1, "5142546369", :Mobile)
                    .courriel("moisebala@gmail.com")
-                   .adresse((Adresse.numero("325")
+                   .adresse(Adresse.numero("325")
                                  .rue("joliette")
                                  .codepostal("J4h-2L4")
                                  .ville("Montreal")
-                                 .pays("Canada ") ).to_s)
+                                 .pays("Canada "))
                    .compagnie("UQAM")
                    .groupe(:Famille)
                    .anniversaire(03,16,1988)
                    .social("moisebala" ,:Facebook)
-    contact2.to_s.must_equal @attendu
+   contact2.to_s.must_equal @attendu
   end
+
 end
 end
+

@@ -2,7 +2,7 @@
 <module type="RUBY_MODULE" version="4">
   <component name="ModuleRunConfigurationManager">
     <configuration default="false" name="contact" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="contacts" />
+      <module name="Contacts" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
